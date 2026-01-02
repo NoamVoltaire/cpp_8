@@ -15,7 +15,7 @@ Span::~Span()
 	// std::cout << "Span: Destructor called" << std::endl;
 }
 
-Span::Span(const Span &other)
+Span::Span(const Span &other) : _N(other._N) ,_vector(other._vector)
 {
 	// std::cout << "Span: Copy constructor called" << std::endl;
 	*this = other;
