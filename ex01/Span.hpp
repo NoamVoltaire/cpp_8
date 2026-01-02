@@ -18,6 +18,8 @@ class Span
 		Span &operator=(const Span &other);
 
 		void	addNumber(int n);
+		int		shortestSpan();
+		int		longestSpan();
 
 
 		class SpanIsFullException : public std::exception
@@ -26,6 +28,11 @@ class Span
 				virtual const char *what() const throw();
 		};
 
+		class NotEnoughNbException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 #endif
