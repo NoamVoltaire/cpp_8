@@ -29,11 +29,27 @@ int	main(void)
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Exception : " << e.what() << std::endl;
+		std::cerr << "Exception : " << e.what() << "\n" << std::endl;
 	}
 
 	std::cout << "Longest Span : " << sp.longestSpan() << std::endl;
 	std::cout << "Shortest Span : " << sp.shortestSpan() << std::endl;
 
+
+
+
+	Span sp2 = Span(100000);
+	std::vector<int> vec;
+	std::srand(time(NULL));
+	for (int i = 0; i < 100000; i++)
+	{
+		
+		int random_int = rand() % 1000000000;
+		vec.push_back(random_int);
+	}
+
+	sp2.addNumber(vec.begin(), vec.end());
+	std::cout << "Longest Span : " << sp2.longestSpan() << std::endl;
+	std::cout << "Shortest Span : " << sp2.shortestSpan() << std::endl;
 
 }

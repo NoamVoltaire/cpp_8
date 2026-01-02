@@ -41,6 +41,14 @@ void	Span::addNumber(int n)
 
 }
 
+void	Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	if (this->_vector.size() + std::distance(begin, end) > this->_N)
+		throw SpanIsFullException();
+	_vector.insert(_vector.end(), begin, end);
+
+}
+
 int	Span::shortestSpan()
 {
 	if 	(this->_vector.size() <= 1)
