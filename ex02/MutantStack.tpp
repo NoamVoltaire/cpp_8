@@ -29,3 +29,16 @@ MutantStack<T> &MutantStack<T>::operator=(const MutantStack &other)
 	}
 	return *this;
 }
+
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::begin()
+{
+	return (this-> c.begin());
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
+{
+	return (this-> c.begin());
+}
+
