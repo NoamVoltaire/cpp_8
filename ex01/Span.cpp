@@ -43,7 +43,7 @@ void	Span::addNumber(int n)
 
 int	Span::shortestSpan()
 {
-	if 	(this->_N <= 1)
+	if 	(this->_vector.size() <= 1)
 		throw NotEnoughNbException();
 	std::vector<int> tmp = _vector;
 		std::sort(tmp.begin(), tmp.end());
@@ -57,7 +57,7 @@ int	Span::shortestSpan()
 }
 int	Span::longestSpan()
 {
-	if 	(this->_N <= 1)
+	if 	(this->_vector.size() <= 1)
 		throw NotEnoughNbException();
 	std::vector<int> tmp = _vector;
 		std::sort(tmp.begin(), tmp.end());
