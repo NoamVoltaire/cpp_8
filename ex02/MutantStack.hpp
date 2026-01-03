@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stack>
 
+
 template <typename T>
 class MutantStack : public std::stack<T>
 {
@@ -32,5 +33,7 @@ public:
 	const_reverse_iterator rend() const;
 
 };
+
+#include "MutantStack.tpp"
 
 #endif
