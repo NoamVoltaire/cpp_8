@@ -4,7 +4,7 @@
 // #include <cstddef>
 #include <iostream>
 #include <exception>
-// #include <algorithm>
+#include <algorithm>
 
 class NotFoundException : public std::exception
 {
