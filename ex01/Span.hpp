@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <exception>
+#include <vector>
+#include <cstdlib>
+#include <algorithm>
 
 class Span
 {
