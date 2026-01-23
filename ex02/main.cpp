@@ -55,52 +55,27 @@ int main()
 		++itz;
 	}
 
-	//std::cout << BLUE << "List test " << RESET << std::endl;
-	//MutantStack<long, std::list<long>>
-	//std::stack<int> s(true_list);
+	std::cout << BLUE << "Weirder stack test" << RESET << std::endl;
+	MutantStack<long, std::list<long> > a_weirder_stack;
+
+	a_weirder_stack.push(5);
+	a_weirder_stack.push(17);
+	std::cout << a_weirder_stack.top() << std::endl;
+	a_weirder_stack.pop();
+	std::cout << a_weirder_stack.size() << std::endl;
+	a_weirder_stack.push(3);
+	a_weirder_stack.push(5);
+	a_weirder_stack.push(737);
+	//[...]
+	a_weirder_stack.push(0);
+	MutantStack<long, std::list<long> >::iterator lit = a_weirder_stack.begin();
+	MutantStack<long, std::list<long> >::iterator lite = a_weirder_stack.end();
+	++lit;
+	--lit;
+	while (lit != lite)
+	{
+		std::cout << *lit << std::endl;
+		++lit;
+	}
 	return 0;
 }
-
-//int main()
-//{
-//	std::list<int> mstack;
-//	mstack.push_back(5);
-//	mstack.push_back(17);
-//	std::cout << mstack.front() << std::endl;
-//	mstack.pop_back();
-//	std::cout << mstack.size() << std::endl;
-//	mstack.push_back(3);
-//	mstack.push_back(5);
-//	mstack.push_back(737);
-//	//[...]
-//	mstack.push_back(0);
-//	std::list<int>::iterator it = mstack.begin();
-//	std::list<int>::iterator ite = mstack.end();
-//	++it;
-//	--it;
-//	while (it != ite)
-//	{
-//		std::cout << *it << std::endl;
-//		++it;
-//	}
-//	//std::stack<int> s(mstack);
-//	return 0;
-//}
-
-
-
-// int	main()
-// {
-// 	MutantStack<int>	ms;
-
-// 	ms.push(3);
-// 	ms.push(6);
-// 	ms.push(10);
-// 	ms.push(21);
-// 	ms.push(42);
-// 	ms.push(85);
-// 	ms.push(99);
-
-// 	std::cout << *ms.begin() << "\n";
-// 	std::cout << *ms.rbegin() << "\n";
-// }

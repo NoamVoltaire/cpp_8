@@ -5,8 +5,8 @@
 #include <stack>
 
 
-template <typename T>
-class MutantStack : public std::stack<T>
+template <typename T, typename C = std::deque<T> >
+class MutantStack : public std::stack<T,C>
 {
 private:
 public:
@@ -15,10 +15,15 @@ public:
 	MutantStack(const MutantStack &other);
 	MutantStack &operator=(const MutantStack &other);
 
-	typedef typename std::stack<T>::container_type::iterator iterator;
-	typedef typename std::stack<T>::container_type::const_iterator const_iterator;
-	typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
-	typedef typename std::stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
+//	typedef typename std::stack<T, C>::container_type::iterator iterator;
+//	typedef typename std::stack<T, C>::container_type::const_iterator const_iterator;
+//	typedef typename std::stack<T, C>::container_type::reverse_iterator reverse_iterator;
+//	typedef typename std::stack<T, C>::container_type::const_reverse_iterator const_reverse_iterator;
+
+	typedef typename C::iterator iterator;
+	typedef typename C::const_iterator const_iterator;
+	typedef typename C::reverse_iterator reverse_iterator;
+	typedef typename C::const_reverse_iterator const_reverse_iterator;
 
 	iterator begin();
 	iterator end();
