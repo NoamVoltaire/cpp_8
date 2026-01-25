@@ -49,7 +49,7 @@ void	Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 
 }
 
-int	Span::shortestSpan()
+int	Span::shortestSpan()const
 {
 	if 	(this->_vector.size() <= 1)
 		throw NotEnoughNbException();
@@ -63,7 +63,7 @@ int	Span::shortestSpan()
 	}
 	return (min);
 }
-int	Span::longestSpan()
+int	Span::longestSpan()const
 {
 	if 	(this->_vector.size() <= 1)
 		throw NotEnoughNbException();
