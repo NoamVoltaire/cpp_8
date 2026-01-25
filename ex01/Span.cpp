@@ -2,33 +2,27 @@
 
 Span::Span() : _N(0)
 {
-	// std::cout << "Span: Default constructor called" << std::endl;
 }
 
 Span::Span(unsigned int N) : _N(N)
 {
-	// std::cout << "Span: Default constructor called" << std::endl;
 }
 
 Span::~Span()
 {
-	// std::cout << "Span: Destructor called" << std::endl;
 }
 
 Span::Span(const Span &other) : _N(other._N) ,_vector(other._vector)
 {
-	// std::cout << "Span: Copy constructor called" << std::endl;
 	*this = other;
 }
 
 Span &Span::operator=(const Span &other)
 {
-	// std::cout << "Span: Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->_N = other._N;
 		this->_vector = other._vector;
-		// Copy members here
 	}
 	return *this;
 }
