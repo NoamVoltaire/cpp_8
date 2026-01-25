@@ -33,7 +33,7 @@ Span &Span::operator=(const Span &other)
 	return *this;
 }
 
-void	Span::addNumber(int n)
+void	Span::addNumber(const int n)
 {
 	if (this->_vector.size() >= this->_N)
 		throw SpanIsFullException();
@@ -41,7 +41,7 @@ void	Span::addNumber(int n)
 
 }
 
-void	Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+void	Span::addNumber(const std::vector<int>::iterator begin, const std::vector<int>::iterator end)
 {
 	if (this->_vector.size() + std::distance(begin, end) > this->_N)
 		throw SpanIsFullException();
